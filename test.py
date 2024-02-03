@@ -51,5 +51,26 @@
 # print(var.get('cell','not exist'))
 
 
-var = {}
-print(var)
+# import random
+# ls = []#Пустий список
+# size = int(input("Enter size of array\n"))#отримали розмір списка
+# for i in range(size):#перебираємо усі елементи
+#     while True:#нескінчений цикл
+#         #створюємо випадкове значення від 0 до 100
+#         number = random.randint(0, 100)
+#         #якщо його немає у списку
+#         if number not in ls:
+#             break#виходимо з нескінченого цикла
+#     ls.append(number)#додаємо елемент у список
+#     #якщо такий елемент у списку буде ми знов повернемось
+#     #до нескінченого цикла и створимо но4ву змінну
+# print(ls)
+
+
+# for i in range(5, 0, -1):
+#     print(i, end=" ")
+
+ls = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ls.sort(reverse=True)
+ls.reverse()
+print(ls, end=" ")
