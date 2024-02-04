@@ -39,7 +39,7 @@ def edit_by_field(field, company):
     if field == 2:
         old_id = int(input("Select the ID to edit: "))
         for employee in company:
-            if old_id in employee:
+            if old_id in employee[1]:
                 new_id = int(input("Enter a new id: "))
                 for employee in company:
                     if new_id in employee:
