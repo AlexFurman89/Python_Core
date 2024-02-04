@@ -39,7 +39,7 @@ def edit_by_field(field, company):
     if field == 2:
         old_id = int(input("Select the ID to edit: "))
         for employee in company:
-            if old_id in employee[1]:
+            if old_id in employee:
                 new_id = int(input("Enter a new id: "))
                 for employee in company:
                     if new_id in employee:
@@ -47,6 +47,9 @@ def edit_by_field(field, company):
                         break
                     else:
                         employee[1] = new_id
+            if old_id not in employee:
+                print("There is no such ID")
+                break
 
 
 def create_first_employee():
