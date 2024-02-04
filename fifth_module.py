@@ -48,15 +48,13 @@ def edit_by_field(field, company):
                 flag = 1
         if flag == 1:
             new_id = int(input("Enter a new id: "))
-            flag_2 = 1
             for employee in company:
                 if new_id in employee:
-                    flag_2 = 0
-                if flag_2 == 1:
-                    employee[1] = new_id
-                elif flag_2 == 0:
                     print("This ID is being used, select another")
                     break
+            for employee in company:
+                if old_id in employee:
+                    employee[1] = new_id
         elif flag == 0:
             print("There is no such ID")
 
