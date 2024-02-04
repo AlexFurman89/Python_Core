@@ -31,7 +31,7 @@ def edit_by_field(field, company):
     if field == 1:
         old_name = input("Select the name to edit: ")
         for employee in company:
-            if old_name in employee[0]:
+            if old_name in employee:
                 new_name = input("Enter a new name: ")
                 employee[0] = new_name
             else:
