@@ -19,11 +19,14 @@ def show_the_list():
 
 
 def search_by_id(ID):
+    print("NAME\tID\tAGE\tSALARY")
     for employee in company:
-        if id_employee == employee[1]:
-            print(employee)
+        if ID in employee:
+            for data in employee:
+                print(data, end="\t")
+            print("\n")
         else:
-            print("There is no such ID")
+            print("There is no such ID\n")
 # 1-Name\n2-ID
 
 
