@@ -41,17 +41,24 @@ def edit_by_field(field, company):
                 print("There is no such name to edit\n")
     if field == 2:
         old_id = int(input("Select the ID to edit: "))
+        flag = 0
         for employee in company:
             if old_id in employee:
+                flag = 1
+        if flag == 1:
+            for employee in company:
                 new_id = int(input("Enter a new id: "))
-                if new_id in employee:
+                flag_2 = 1
+                for employee in company:
+                    if new_id in employee:
+                        flag_2 = 0
+                if flag_2 == 1:
+                    employee[1] = new_id
+                elif flag_2 == 0:
                     print("This ID is being used, select another")
                     break
-                else:
-                    employee[1] = new_id
-            if old_id not in employee:
-                print("There is no such ID")
-                break
+        elif flag == 0:
+            print("There is no such ID")
 
 
 def create_first_employee():
@@ -103,3 +110,5 @@ while True:
             field = int(
                 input("Which field to edit\n1-Name\n2-ID\n"))
             edit_by_field(field, company)
+        elif choice == 5:
+            break
