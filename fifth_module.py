@@ -15,7 +15,7 @@ def show_the_list():
     for employee in company:
         for data in employee:
             print(data, end="\t")
-        print("\n")
+        print("")
 
 
 def search_by_id(ID):
@@ -25,8 +25,9 @@ def search_by_id(ID):
             for data in employee:
                 print(data, end="\t")
             print("\n")
-        else:
-            print("There is no such ID\n")
+            break
+    else:
+        print("There is no such ID\n")
 # 1-Name\n2-ID
 
 
