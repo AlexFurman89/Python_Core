@@ -44,12 +44,11 @@ def edit_by_field(field, company):
         for employee in company:
             if old_id in employee:
                 new_id = int(input("Enter a new id: "))
-                for employee in company:
-                    if new_id in employee:
-                        print("This ID is being used, select another")
-                        break
-                    else:
-                        employee[1] = new_id
+                if new_id in employee:
+                    print("This ID is being used, select another")
+                    break
+                else:
+                    employee[1] = new_id
             if old_id not in employee:
                 print("There is no such ID")
                 break
